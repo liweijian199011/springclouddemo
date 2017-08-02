@@ -1,0 +1,14 @@
+server:
+  port: 2222
+spring:
+  application:
+    name: compute-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka
+  instance:
+    prefer-ip-address: true
+management:
+  security:
+    enabled: false
