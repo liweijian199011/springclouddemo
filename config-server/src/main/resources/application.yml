@@ -8,7 +8,9 @@ spring:
       server:
         git:
           uri: https://github.com/liweijian199011/configRepository.git
-          search-paths: /
+          username:
+          password:
+          search-paths: '{application}'
 management:
   security:
     enabled: false
@@ -16,3 +18,7 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:1111/eureka
+security:
+  user:
+    name: admin
+    password: admin

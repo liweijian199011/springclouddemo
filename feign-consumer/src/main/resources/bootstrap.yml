@@ -1,0 +1,24 @@
+server:
+  port: 4444
+spring:
+  application:
+    name: feign-consumer
+  cloud:
+    config:
+      profile: test
+      label: master
+      discovery:
+        enabled: true
+        service-id: config-server
+      username: admin
+      password: admin
+management:
+  security:
+    enabled: false
+feign:
+  hystrix:
+    enabled: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka
