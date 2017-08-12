@@ -1,5 +1,6 @@
 package com.sayabc.controller;
 
+//import com.jack.ExampleService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,9 @@ public class ComputeController {
     @Autowired
     private DiscoveryClient discoveryClient;
 
+//    ExampleService exampleService;
+
+//    private RedisClient
     @GetMapping("/add")
     public Integer add(Integer a, Integer b) {
         ServiceInstance serviceInstance = discoveryClient.getLocalServiceInstance();
@@ -32,4 +36,11 @@ public class ComputeController {
                 result, serviceInstance.getHost(), serviceInstance.getServiceId(), serviceInstance.getPort());
         return result;
     }
+//
+//    @GetMapping("/test")
+//    public String test(String word) {
+//        return exampleService.wrap(word);
+//    }
+
+
 }
