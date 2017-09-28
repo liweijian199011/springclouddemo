@@ -1,3 +1,14 @@
+management:
+  security:
+    enabled: false
+spring:
+  profiles:
+    active: server1
+  application:
+    name: eureka-server
+
+---
+
 server:
   port: 1111
 eureka:
@@ -5,10 +16,38 @@ eureka:
     fetch-registry: false
     register-with-eureka: false
     service-url:
-      defaultZone: http://localhost:1111/eureka
-management:
-  security:
-    enabled: false
-#security:
-#  basic:
-#    enabled: false
+      defaultZone: http://eureka-server2:1112/eureka/, http://eureka-server3:1113/eureka/
+  instance:
+    hostname: eureka-server1
+spring:
+  profiles: server1
+
+---
+
+server:
+  port: 1112
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka-server1:1111/eureka/, http://eureka-server3:1113/eureka/
+  instance:
+    hostname: eureka-server2
+spring:
+  profiles: server2
+
+---
+
+server:
+  port: 1113
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka-server1:1111/eureka/, http://eureka-server2:1112/eureka/
+  instance:
+    hostname: eureka-server3
+spring:
+  profiles: server3

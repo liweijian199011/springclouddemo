@@ -1,4 +1,4 @@
-package com.vipkid.arch.controller;
+package com.jack.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

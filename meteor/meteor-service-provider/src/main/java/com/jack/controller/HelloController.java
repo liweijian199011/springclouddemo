@@ -1,6 +1,6 @@
-package com.vipkid.arch.controller;
+package com.jack.controller;
 
-import com.vipkid.arch.api.HelloService;
+import com.jack.api.HelloService;
 import org.springframework.web.bind.annotation.RestController;
 
 /**

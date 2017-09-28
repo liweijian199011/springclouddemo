@@ -3,7 +3,7 @@
 #以下配置不要在线上开启
 logging:
   level:
-    com.vipkid.arch: DEBUG
+    com.jack: DEBUG
 
 management:
   security:
