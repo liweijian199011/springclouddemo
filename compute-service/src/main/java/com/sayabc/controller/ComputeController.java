@@ -4,6 +4,7 @@ package com.sayabc.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,6 +26,8 @@ public class ComputeController {
     @Autowired
     private DiscoveryClient discoveryClient;
 
+    @Value("${client}")
+    private String client;
 //    ExampleService exampleService;
 
 //    private RedisClient
@@ -35,6 +38,11 @@ public class ComputeController {
         logger.info("result: {}, host: {}, port:{}, serviceId: {}",
                 result, serviceInstance.getHost(), serviceInstance.getServiceId(), serviceInstance.getPort());
         return result;
+    }
+
+    @GetMapping("/test")
+    public String test() {
+        return this.client;
     }
 //
 //    @GetMapping("/test")

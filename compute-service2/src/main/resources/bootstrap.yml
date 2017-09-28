@@ -1,8 +1,17 @@
 server:
-  port: 2222
+  port: 2223
 spring:
   application:
     name: compute-service
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
+      username: admin
+      password: admin
+      profile: test
+      label: master
 eureka:
   client:
     service-url:

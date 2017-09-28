@@ -9,6 +9,6 @@ eureka:
 management:
   security:
     enabled: false
-security:
-  basic:
-    enabled: false
+#security:
+#  basic:
+#    enabled: false
