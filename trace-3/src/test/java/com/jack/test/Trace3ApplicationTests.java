@@ -1,4 +1,4 @@
-package com.vipkid;
+package com.jack.test;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class Trace2ApplicationTests {
+public class Trace3ApplicationTests {
 
 	@Test
 	public void contextLoads() {
