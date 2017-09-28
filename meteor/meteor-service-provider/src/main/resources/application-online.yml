@@ -1,0 +1,13 @@
+spring:
+  # 数据库配置
+  datasource:
+      url: jdbc:mysql://localhost:3306/test
+      username: root
+      password: root
+      driver-class-name: com.mysql.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+
+  # redis配置
+  redis:
+    cluster:
+      nodes: 172.16.169.250:6379,172.16.169.250:6380,172.16.169.250:6381

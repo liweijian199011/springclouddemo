@@ -1,0 +1,27 @@
+server:
+  port: 8082
+
+spring:
+  # 数据库配置
+  datasource:
+      url: jdbc:mysql://localhost:3306/test
+      username: root
+      password: root
+      driver-class-name: com.mysql.jdbc.Driver
+
+  # redis配置
+  redis:
+    cluster:
+      nodes: 127.0.0.1:6379,127.0.0.1:6380,127.0.0.1:6381
+
+#以下配置不要在线上开启
+logging:
+  level:
+    com.vipkid.arch: DEBUG
+
+management:
+  security:
+    enabled: false
+  health:
+    defaults:
+      enabled: false

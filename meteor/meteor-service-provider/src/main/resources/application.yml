@@ -1,0 +1,7 @@
+server:
+  port: 1212
+spring:
+  application:
+    name: meteor-service
+  profiles:
+    active: dev

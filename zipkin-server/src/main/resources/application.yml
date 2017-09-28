@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: zipkin-server
+  datasource:
+    schema: classpath:/mysql.sql
+    url: jdbc:mysql://localhost:3306/zipkin
+    username: root
+    password: root
+    initialize: true
+    continue-on-error: true
+server:
+  port: 9411
+zipkin:
+  storage:
+    type: mysql

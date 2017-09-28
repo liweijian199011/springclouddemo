@@ -1,0 +1,15 @@
+server:
+  port: 1234
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka
+spring:
+  application:
+    name: trace-1
+management:
+  security:
+    enabled: false
+endpoints:
+  health:
+    sensitive: false

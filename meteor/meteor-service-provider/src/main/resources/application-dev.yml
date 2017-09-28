@@ -1,0 +1,14 @@
+
+
+#以下配置不要在线上开启
+logging:
+  level:
+    com.vipkid.arch: DEBUG
+
+management:
+  security:
+    enabled: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka

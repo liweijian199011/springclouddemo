@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: meteor-consumer
+server:
+  port: 1313
+management:
+  security:
+    enabled: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka
